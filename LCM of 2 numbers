@@ -1,0 +1,21 @@
+// LCM of 2 numbers
+#include <stdio.h>
+void main() {
+    int a, b;
+    printf("Enter 2 numbers: ");
+    scanf("%d%d", &a, &b);
+    int big=a>b?a:b;
+    int step=big;
+    while(1)
+    {
+        if (big%a==0 && big%b==0)
+            break;
+        else
+            big=big+step;
+        }
+    printf("LCM is %d", big);
+}
+//Output:
+Enter 2 numbers: 12
+5
+LCM is 60
