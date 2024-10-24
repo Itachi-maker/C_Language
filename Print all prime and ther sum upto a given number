@@ -1,0 +1,23 @@
+//Print all prime and ther sum upto a given number
+#include <stdio.h>
+int main() {
+    int num, i, j, isPrime, sum=0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("The prime numbers till %d are:", num);
+    for (i = 2; i <= num; i++) {
+        isPrime = 1;
+        for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+        if (isPrime == 1) {
+            printf("\n%d ", i);
+            sum+=i;
+        }
+    }
+    printf("\nThe total sum of the prime upto %d= %d", num, sum);
+    return 0;
+}
