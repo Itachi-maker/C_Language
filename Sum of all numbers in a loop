@@ -1,0 +1,12 @@
+//sum of all numbers in a loop
+#include<stdio.h>
+void main{
+int a, sum;
+pritnf("Enter any number:");
+scanf("%d", &a);
+for (int i=1; i<=a; i++){
+printf("\nHai %d", i);
+sum+=i;
+}
+printf("\nTotal sum=%d", sum);
+}
