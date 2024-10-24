@@ -1,0 +1,9 @@
+//Print all numbers in a loop instead  of multiples of 3 4 5 and 10
+#inslude<stdio.h>
+void main(){
+for(int i=100; i<=999; i++){
+if(i%3==0 || i%4==0 || i%5==0 || i%10==0)
+continue;
+printf("\n%d", i)
+}
+}
