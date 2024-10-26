@@ -1,0 +1,26 @@
+//Searching an element in an array
+#include <stdio.h>
+#include <limits.h>
+int main() { 
+    int n, s;
+    printf("Enter the size of the Array: ");
+    scanf("%d", &n); 
+    int a[n];
+    printf("Enter %d elements: ", n);
+    for(int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    printf("Enter the element needed to be searched: ");
+    scanf("%d", &s);
+    int f = 0; 
+    for(int i = 0; i < n; i++) {
+        if(s == a[i]) {
+            printf("Element present at index %d\n", i);
+            f = 1;
+            break;
+        }
+    }
+    if (f!=1)
+        printf("No such element\n");
+    
+    return 0;
+}
