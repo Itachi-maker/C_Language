@@ -1,0 +1,24 @@
+//Checking palindrome in an Array using Recursion
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+bool isPalindrome(char s[], int i, int j) {
+    if (i >= j)
+        return true;
+    if (s[i] != s[j])
+        return false;
+    return isPalindrome(s, i + 1, j - 1); 
+}
+int main() { 
+    int n;
+    printf("Enter the size of the Array: ");
+    scanf("%d", &n); 
+    char s[n];
+    printf("Enter a string: ");
+    scanf("%s", s); 
+    if (isPalindrome(s, 0, n - 1)) 
+        printf("Is Palindrome.\n");
+    else
+        printf("Not a Palindrome.\n");
+    return 0;
+}
