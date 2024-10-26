@@ -1,0 +1,31 @@
+//Taking input for 2 2d arrays and displaying it
+#include <stdio.h>
+void inputMatrix(int r, int c, int a[r][c]){
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+}
+void display(int r, int c, int a[r][c]) { 
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            printf("%d ", a[i][j]); 
+        }
+        printf("\n");
+    }
+}
+void main() { 
+    int r, c;
+    printf("Enter the dimensions (row and column number) of the 2D array: ");
+    scanf("%d%d", &r, &c); 
+    int M1[r][c], M2[r][c];
+    printf("Enter %d elements for 1st Matrix:\n", r * c);
+    inputMatrix(r, c, M1);
+    printf("Enter %d elements for 2nd Matrix:\n", r * c);
+    inputMatrix(r, c, M2);
+    printf("Displaying 1st Matrix:\n");
+    display(r, c, M1);
+    printf("Displaying 2nd Matrix:\n");
+    display(r, c, M2);
+}
