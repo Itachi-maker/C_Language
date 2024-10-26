@@ -1,0 +1,22 @@
+//Copying elements of an array
+#include <stdio.h>
+#include <limits.h>
+#include <stdbool.h>
+int main() { 
+    int n, s, copy[100];
+    printf("Enter the size of the Array: ");
+    scanf("%d", &n); 
+    int a[n], b[n];
+    printf("Enter %d elements: ", n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    for(int i=0; i < n; i++){
+        b[i]=a[i];
+    }
+    printf("Copied Array: ");
+    for(int i = 0; i < n; i++) {
+        printf("%d ", b[i]); 
+    }
+    return 0;
+}
