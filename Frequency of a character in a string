@@ -1,0 +1,19 @@
+//Frequency of a character in a string
+#include<stdio.h>
+#include<string.h>
+void main() {
+    char S[10];
+    int i, j, c=0;
+    printf("Enter the String: ");
+    fgets(S, sizeof(S), stdin);
+    for(i=0; i<strlen(S); i++){
+        for(j=0; j<strlen(S); j++){
+            if(S[i]==S[j]){
+                c++;
+            }
+        }
+        printf("Frequency of %c = %d\n", S[i], c);
+        c=0;
+
+    }
+}
