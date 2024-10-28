@@ -1,0 +1,42 @@
+//Multiplication of 2 2-D Matrix
+#include <stdio.h>
+void inputMatrix(int r, int c, int a[r][c]) {
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+}
+void displayMatrix(int r, int c, int a[r][c]) {
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+void multiplyMatrices(int r1, int c1, int a[r1][c1], int r2, int c2, int b[r2][c2], int result[r1][c2]) {
+    for(int i = 0; i < r1; i++) {
+        for(int j = 0; j < c2; j++) {
+            result[i][j] = 0;
+            for(int k = 0; k < c1; k++) {
+                result[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+}
+void main() {
+    int r1, c1, r2, c2;
+    printf("Enter the dimensions (row and column number) of the 1st 2D array: ");
+    scanf("%d%d", &r1, &c1);
+    printf("Enter the dimensions (row and column number) of the 2nd 2D array: ");
+    scanf("%d%d", &r2, &c2);
+    int M1[r1][c1], M2[r2][c2], result[r1][c2];
+    printf("Enter %d elements for the 1st matrix:\n", r1 * c1);
+    inputMatrix(r1, c1, M1);
+    printf("Enter %d elements for the 2nd matrix:\n", r2 * c2);
+    inputMatrix(r2, c2, M2);
+    multiplyMatrices(r1, c1, M1, r2, c2, M2, result);
+    printf("Resulting Matrix after Multiplication:\n");
+    displayMatrix(r1, c2, result);
+}
