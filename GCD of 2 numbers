@@ -1,0 +1,13 @@
+//GCD of 2 numbers
+#include <stdio.h>
+int gcd(int x, int y){
+    if(x == 1)
+        return y;
+    return gcd(x%y, x);
+}
+void main(){
+    int x, y;
+    printf("Enter the 2 numbers:");
+    scanf("%d%d", &x, &y);
+    printf("The gcd f the given numbers is %d", gcd(x, y));
+}
