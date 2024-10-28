@@ -1,0 +1,26 @@
+//Searching of character in a string
+#include<stdio.h>
+#include<string.h>
+void main() {
+    char S[100];
+    char c;
+    int i, found = -1;
+
+    printf("Enter the String: ");
+    fgets(S, sizeof(S), stdin);
+    S[strcspn(S, "\n")] = '\0';
+    printf("Enter the character to be searched: ");
+    scanf("%c", &c);
+    for(i = 0; i < strlen(S); i++) {
+        if(S[i] == c) {
+            found = i;
+            break;
+        }
+    }
+    if (found != -1) {
+        printf("Character found at index %d.\n", found);
+    } else {
+        printf("Character not found in the string.\n");
+    }
+}
+
