@@ -1,0 +1,21 @@
+//Swapping numbers using pointers
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+void swap(int *a, int *b){
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
+void main(){
+    int a, b;
+    printf("Enter the value of a= ");
+    scanf("%d", &a);
+    printf("Enter the value of b= ");
+    scanf("%d", &b);
+    printf("Before swap.\nValue of a= %d\nValue of b= %d", a, b);
+    printf("\nAfter swap.");
+    swap(&a, &b);
+    printf("\nValue of a= %d\nValue of b= %d", a, b);
+}
