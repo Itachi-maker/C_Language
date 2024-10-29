@@ -1,0 +1,41 @@
+//Taking input and getting output in Structure using Sub structure(3 subject marks per student)
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+struct marks {
+    int sub1;
+    int sub2;
+    int sub3;
+};
+struct sist {
+    char Name[50];
+    int RegNo;
+    struct marks marks;
+} s[3];
+void main() {
+    int n;
+    printf("Enter the number of students:\n");
+    scanf("%d", &n);
+    s[n];
+    struct sist;
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter name %d: ", i + 1);
+        scanf("%s", s[i].Name);
+        printf("Enter RegNo %d: ", i + 1);
+        scanf("%d", &s[i].RegNo);
+        printf("Enter marks of sub1: ");
+        scanf("%d", &s[i].marks.sub1);
+        printf("Enter marks of sub2: ");
+        scanf("%d", &s[i].marks.sub2);
+        printf("Enter marks of sub3: ");
+        scanf("%d", &s[i].marks.sub3);
+    }
+    for (int i = 0; i < n; i++) {
+        printf("\nDetails of student %d:\n", i + 1);
+        printf("Name: %s\n", s[i].Name);
+        printf("RegNo: %d\n", s[i].RegNo);
+        printf("Marks of sub1: %d\n", s[i].marks.sub1);
+        printf("Marks of sub2: %d\n", s[i].marks.sub2);
+        printf("Marks of sub3: %d\n", s[i].marks.sub3);
+    }
+}
